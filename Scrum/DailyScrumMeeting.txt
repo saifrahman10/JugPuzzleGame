@@ -1,0 +1,15 @@
+# Fill in, commit and push frequently
+
+July 2, 2020
+    Yesterday:
+        - None
+    Today:
+        - Initialized relevant jug classes, implemented user input for gameplay
+    Obstacles:
+        - Difficulties setting up git repository
+        - Setting up GUI
+July 3, 2020
+    Yesterday:
+        - Stared jug puzzle game project and user-friendly gameplay
+    Today:
+        - Successfully setup git repository, made first commits
