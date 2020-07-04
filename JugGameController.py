@@ -1,7 +1,8 @@
 from JugClass import Jug
 from JugGameClass import Jug_Game
+from JugGUI import *
 
-def main():
+def start_game():
     jug1 = Jug(3)
     jug2 = Jug(5)
     juggame = Jug_Game(jug1, jug2)
@@ -26,7 +27,7 @@ def main():
         if move == '6':
             juggame.transfer(jug2, jug1)
     print("Congratulations you've won!")
-main()
+start_game()
 
 # Winning moves:
 # 3
