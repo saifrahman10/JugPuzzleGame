@@ -5,10 +5,11 @@ class Jug_Game:
     def __init__(self, jug1, jug2):
         self.jug1 = jug1
         self.jug2 = jug2
-
+    def reset(self):
+        self.jug1.amount = 0
+        self.jug2.amount = 0
     def is_win(self):
         return self.jug2.amount == 4
-
     def transfer(self, fromjug, tojug):
         if tojug.amount != tojug.capacity:
             space = tojug.capacity - tojug.amount
