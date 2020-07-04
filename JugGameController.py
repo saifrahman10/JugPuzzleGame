@@ -10,22 +10,19 @@ def start_game():
         options = "1: Empty jug 1\n2: Empty jug 2\n3: Fill Jug 1\n4: Fill Jug 2\n5: Pour jug 1 into jug 2\n6: Pour jug 2 into jug 1"
         juggame.status()
         move = input("What move would you like to make: ")
-        if move == 's':
-            juggame.status()
-        if move == 'o':
-            print(options)
-        if move == '1':
-            jug1.empty()
-        if move == '2':
-            jug2.empty()
-        if move == '3':
-            jug1.fill()
-        if move == '4':
-            jug2.fill()
-        if move == '5':
-            juggame.transfer(jug1, jug2)
-        if move == '6':
-            juggame.transfer(jug2, jug1)
+        options_dict = {
+            's': juggame.status
+            'o': lambda: print(options)
+            '1': jug1.empty
+            '2': jug2.empty
+            '3': jug1.fill
+            '4': jug2.fill
+            '5': lambda: juggame.transfer(jug1, jug2)
+            '6': lambda: juggame.transfer(jug2, jug1)
+        }
+        
+        if move in options_dict:
+            options_dict[move]()
     print("Congratulations you've won!")
 start_game()
 
