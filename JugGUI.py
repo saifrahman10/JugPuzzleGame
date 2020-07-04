@@ -18,7 +18,7 @@ class JugGameGUI():
         y = random.randrange(2, 25)
         jug1 = Jug(x)
         jug2 = Jug(y)
-        win_num = (max(x, y) // math.gcd(x, y)) * max(x, y)
+        win_num = (max(x, y) // math.gcd(x, y) - 1) * max(x, y)
         self.game = Jug_Game(self.jug1, self.jug2, win_num)
 
         img = Image.open('JugImages/Jug1Fill0.png')
