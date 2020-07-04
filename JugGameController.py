@@ -5,8 +5,10 @@ import random
 import math
 
 def start_game():
-    x = random.randrange(2, 25)
-    y = random.randrange(2, 25)
+    x = y = 0
+    while x == y:
+        x = random.randrange(2, 25)
+        y = random.randrange(2, 25)
     jug1 = Jug(x)
     jug2 = Jug(y)
     win_num = (max(x, y) // math.gcd(x, y) - 1) * max(x, y)
