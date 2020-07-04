@@ -11,13 +11,13 @@ def start_game():
         juggame.status()
         move = input("What move would you like to make: ")
         options_dict = {
-            's': juggame.status
-            'o': lambda: print(options)
-            '1': jug1.empty
-            '2': jug2.empty
-            '3': jug1.fill
-            '4': jug2.fill
-            '5': lambda: juggame.transfer(jug1, jug2)
+            's': juggame.status,
+            'o': lambda: print(options),
+            '1': jug1.empty,
+            '2': jug2.empty,
+            '3': jug1.fill,
+            '4': jug2.fill,
+            '5': lambda: juggame.transfer(jug1, jug2),
             '6': lambda: juggame.transfer(jug2, jug1)
         }
         
