@@ -4,8 +4,8 @@ import PIL
 from PIL import ImageTk, Image
 from JugClass import Jug
 from JugGameClass import Jug_Game
-
-
+import random
+import math
 
 
 class JugGameGUI():
@@ -14,9 +14,12 @@ class JugGameGUI():
         self.root.geometry("500x300")
         self.root.title('Jug Puzzle Game')
 
-        self.jug1 = Jug(3)
-        self.jug2 = Jug(5)
-        self.game = Jug_Game(self.jug1, self.jug2)
+        x = random.randrange(2, 25)
+        y = random.randrange(2, 25)
+        jug1 = Jug(x)
+        jug2 = Jug(y)
+        win_num = (max(x, y) // math.gcd(x, y)) * max(x, y)
+        self.game = Jug_Game(self.jug1, self.jug2, win_num)
 
         img = Image.open('JugImages/Jug1Fill0.png')
         jug1img = ImageTk.PhotoImage(img)
