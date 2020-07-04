@@ -1,4 +1,6 @@
 from tkinter import *
+from tkinter import ttk
+
 from PIL import ImageTk, Image
 from JugClass import Jug
 from JugGameClass import Jug_Game
@@ -6,7 +8,7 @@ import tkinter.messagebox
 
 # Create main window
 tk = Tk()
-tk.geometry('370x360')
+tk.geometry('370x380')
 # Set window title
 tk.title("Jug Puzzle Game")
 action, fromJug = 'None', None
@@ -27,8 +29,9 @@ def updateJugGraphic():
     jug2_button.configure(image=jug2img)
     jug2_button.image = jug2img
 
-    jug1_text.set('Amount: ' + str(jug1.amount))
-    jug2_text.set('Amount: ' + str(jug2.amount))
+    jug1_text.set('Jug #1 Amount: ' + str(jug1.amount))
+    jug2_text.set('Jug #2 Amount: ' + str(jug2.amount))
+
 # Function to complete game moves and updated button text as required
 def jugClick(button,jug):
     global action, fromJug
@@ -61,7 +64,8 @@ def buttonClick(buttons):
     if buttons['text'] == 'Reset Game':
         jug_game.reset()
         updateJugGraphic()
-
+    if buttons['text'] == 'How-to-play':
+        msg = tkinter.messagebox.showinfo('Instructions', jug_game.instructions)
 # Function to check WIN condition
 def checkForWin():
     if jug_game.is_win():
@@ -69,6 +73,7 @@ def checkForWin():
         tk.quit()
 
 # Game Feedback Label
+
 feedback_var = StringVar()
 feedback_var.set('Welcome to Jug Puzzle')
 feedback_label = Label(textvariable=feedback_var)
@@ -77,13 +82,13 @@ feedback_label.grid(row=0, column=0, columnspan=2)
 # Jug Text Amount
 
 jug1_text = StringVar()
-jug1_text.set('Amount: 0')
+jug1_text.set('Jug #1 Amount: 0')
 jug1_amount_label = Label(textvariable=jug1_text)
 jug1_amount_label.grid(row=1,column=0)
 
 
 jug2_text = StringVar()
-jug2_text.set('Amount: 0')
+jug2_text.set('Jug #2 Amount: 0')
 jug2_amount_label = Label(textvariable=jug2_text)
 jug2_amount_label.grid(row=1,column=1)
 
@@ -104,7 +109,10 @@ B1.grid(row=3, column=0)
 B2 = Button(tk, text='Empty', height=2, width=20, command=lambda: buttonClick(B2))
 B2.grid(row=3, column=1)
 
-B3 = Button(tk, text='Reset Game', fg='red', height=1, width=40,  command=lambda: buttonClick(B3))
+B3 = Button(tk, text='How-to-play', height=1, width=40,  command=lambda: buttonClick(B3))
 B3.grid(row=4, column=0, columnspan=2)
+
+B4 = Button(tk, text='Reset Game', fg='red', height=1, width=40,  command=lambda: buttonClick(B4))
+B4.grid(row=5, column=0, columnspan=2)
 
 tk.mainloop()

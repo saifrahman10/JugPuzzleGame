@@ -8,6 +8,7 @@ July 2, 2020
     Obstacles:
         - Difficulties setting up git repository
         - Setting up GUI
+
 July 3, 2020
     Yesterday:
         - Started jug puzzle game project and user-friendly game play
@@ -21,6 +22,7 @@ July 3, 2020
             - Positioning of labels/buttons
             - Better UI
         - Make jug buttons move options (click jug 1 image then jug 2 image to transfer)
+
 July 4th, 2020
     Yesterday:
         - Setup git repo, created graphics and working GUI
@@ -29,8 +31,7 @@ July 4th, 2020
         - Updated Jug images
         - Jug images as move options
         - Added reset method to JugGameClass and reset button to GUI
+        - Added how-to-play component
     Obstacles:
-        - Better UI
-        - Add sounds for moves
-        - Message box to have options to start new game or quit
-        - Add how-to-play component
+        - MacOS unable to change button backgrounds.
+        - Finished
