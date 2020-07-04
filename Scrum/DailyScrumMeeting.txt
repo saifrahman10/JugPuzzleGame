@@ -14,9 +14,10 @@ July 3, 2020
     Today:
         - Successfully setup git repository, made first commits
         - Created jug graphics and added them to repository
+        - Created working GUI, with working game buttons.
     Obstacles:
-        - Jug images not appearing, but labels and buttons are
         - Formatting GUI
-            - General structure of JugGUI.py
+            - Fitting jug images in labels
             - Positioning of labels/buttons
-        - Adding game controls
+            - Better UI
+        - Make jug buttons move options (click jug 1 image then jug 2 image to transfer)
