@@ -1,11 +1,16 @@
 from JugClass import Jug
 from JugGameClass import Jug_Game
 from JugGUI import *
+import random
+import math
 
 def start_game():
-    jug1 = Jug(3)
-    jug2 = Jug(5)
-    juggame = Jug_Game(jug1, jug2)
+    x = random.randrange(2, 25)
+    y = random.randrange(2, 25)
+    jug1 = Jug(x)
+    jug2 = Jug(y)
+    win_num = (max(x, y) // math.gcd(x, y)) * max(x, y)
+    juggame = Jug_Game(jug1, jug2, win_num)
     while not juggame.is_win():
         options = "1: Empty jug 1\n2: Empty jug 2\n3: Fill Jug 1\n4: Fill Jug 2\n5: Pour jug 1 into jug 2\n6: Pour jug 2 into jug 1"
         juggame.status()
