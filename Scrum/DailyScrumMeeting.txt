@@ -4,17 +4,19 @@ July 2, 2020
     Yesterday:
         - None
     Today:
-        - Initialized relevant jug classes, implemented user input for gameplay
+        - Initialized relevant jug classes, implemented user input for game play
     Obstacles:
         - Difficulties setting up git repository
         - Setting up GUI
 July 3, 2020
     Yesterday:
-        - Stared jug puzzle game project and user-friendly gameplay
+        - Stared jug puzzle game project and user-friendly game play
     Today:
         - Successfully setup git repository, made first commits
+        - Created jug graphics and added them to repository
     Obstacles:
         - Jug images not appearing, but labels and buttons are
         - Formatting GUI
+            - General structure of JugGUI.py
             - Positioning of labels/buttons
         - Adding game controls
