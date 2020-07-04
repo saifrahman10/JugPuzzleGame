@@ -2,12 +2,13 @@ from JugClass import Jug
 
 
 class Jug_Game:
-    def __init__(self, jug1, jug2):
+    def __init__(self, jug1, jug2, win):
         self.jug1 = jug1
         self.jug2 = jug2
+        self.win = win
 
     def is_win(self):
-        return self.jug2.amount == 4
+        return self.jug2.amount == self.win
 
     def transfer(self, fromjug, tojug):
         if tojug.amount != tojug.capacity:
